@@ -9,7 +9,7 @@ No more staring at a silent terminal — you'll hear it the moment Claude needs 
 ## Install
 
 ```powershell
-git clone https://github.com/gaston-tittarelli/claude-sound-hook
+git clone https://github.com/GastonTittarelli/claude-sound-hook
 cd claude-sound-hook
 powershell -ExecutionPolicy Bypass -File install.ps1
 ```
