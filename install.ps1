@@ -10,8 +10,9 @@ Write-Host "Installing Claude Code Sound Hook..."
 New-Item -ItemType Directory -Force -Path $soundsDir | Out-Null
 
 # 2. Copy files
-Copy-Item (Join-Path $scriptDir "sound.mp3") $soundsDir -Force
+Get-ChildItem (Join-Path $scriptDir "*.mp3") | ForEach-Object { Copy-Item $_.FullName $soundsDir -Force }
 Copy-Item (Join-Path $scriptDir "play.ps1") $soundsDir -Force
+Copy-Item (Join-Path $scriptDir "config.ps1") $soundsDir -Force
 
 Write-Host "Files copied to $soundsDir"
 

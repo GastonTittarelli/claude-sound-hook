@@ -31,13 +31,21 @@ Claude Code supports [hooks](https://docs.anthropic.com/en/docs/claude-code/hook
 
 ## Customize
 
-**Change the sound:** replace `%USERPROFILE%\.claude\sounds\sound.mp3` with any MP3.
+Edit `config.ps1` in the repo, then run `install.ps1` again to apply.
 
-**Mute temporarily:** rename `sound.mp3` to `sound.mp3.off`.
+```powershell
+# Volume: 0 (mute) to 1000 (maximum)
+$Volume = 150
 
-**Adjust volume:** edit `%USERPROFILE%\.claude\sounds\play.ps1` and change the number in `setaudio mp3 volume to`:
+# Sound file: any MP3 in this folder
+$SoundFile = "sound.mp3"
+```
 
-| Value  | Level              |
+**Included sounds:** `sound.mp3`, `sound-ll.mp3`, `sound-lll.mp3`
+
+**Use your own sound:** drop any MP3 into the repo folder and set its name in `$SoundFile`.
+
+| Volume | Level              |
 |--------|--------------------|
 | `50`   | Very low           |
 | `150`  | Low (recommended)  |
